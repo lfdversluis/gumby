@@ -138,7 +138,7 @@ class ExperimentServiceProto(LineReceiver):
             return 'init'
 
         elif line.strip() == 'ready':
-            self._logger.debug("This subscriber is ready now.")
+            self._logger.info("This subscriber is ready now.")
             self.ready = True
             self.factory.setConnectionReady(self)
             self.ready_d.callback(self)
@@ -360,16 +360,16 @@ class ExperimentClient(object, LineReceiver):
                 self.transport.loseConnection()
 
     def onVarsSend(self):
-        self._logger.debug("onVarsSend: Call not implemented")
+        self._logger.warning("onVarsSend: Call not implemented")
 
     def onIdReceived(self):
-        self._logger.debug("onIdReceived: Call not implemented")
+        self._logger.warning("onIdReceived: Call not implemented")
 
     def onAllVarsReceived(self):
-        self._logger.debug("onAllVarsReceived: Call not implemented")
+        self._logger.warning("onAllVarsReceived: Call not implemented")
 
     def startExperiment(self):
-        self._logger.debug("startExperiment: Call not implemented")
+        self._logger.warning("startExperiment: Call not implemented")
 
     def get_peer_id(self, ip, port):
         port = int(port)

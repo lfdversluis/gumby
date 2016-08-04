@@ -44,7 +44,6 @@ from time import time
 from twisted.internet import reactor
 from twisted.internet.defer import inlineCallbacks
 
-from twisted.internet.task import LoopingCall
 
 from gumby.experiments.dispersyclient import DispersyExperimentScriptClient, main
 

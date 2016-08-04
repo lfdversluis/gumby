@@ -43,7 +43,7 @@ import logging
 from collections import Iterable, defaultdict
 from os import chdir, environ, getpid, makedirs, path, symlink
 from random import random
-from sys import exit, stderr, stdout
+from sys import exit
 from time import time
 from traceback import print_exc
 
@@ -54,7 +54,6 @@ from gumby.sync import ExperimentClient, ExperimentClientFactory
 from twisted.internet import reactor
 from twisted.internet.defer import inlineCallbacks, returnValue
 from twisted.internet.task import deferLater
-from twisted.internet.threads import deferToThread
 
 
 def buffer_online(func):
